@@ -12,24 +12,33 @@ function validateExpression() {
     const inputField = document.getElementById("input-field").value;
     const validationResult = document.getElementById("validation-result");
 
-    const regularExpressions = {
-        "Email": /^[\w\.-]+@[\w\.-]+$/,
-        "Phone": /^(?:\+880|880|0)\d{10}$/,
-        "Postcode": /^\d{4}$/, //considering only digits
-        "Domain": /^(?!-)([A-Za-z0-9-]+\.)*[A-Za-z0-9-]{1,63}(?<!-)(\.[A-Za-z]{2,6})$/
-    };
+    let isValid = false;
 
-    if (regularExpressions.hasOwnProperty(validationType)) {
-        const regexPattern = regularExpressions[validationType];
-        if (regexPattern.test(inputField)) {
-            validationResult.innerHTML = `<span class="valid">\"<b>${inputField}</b>\" is a Valid Expression of type: <b>${validationType}</b></span>`;
-        } else {
-            validationResult.innerHTML = `<span class="invalid">\"<b>${inputField}</b>\" is not a Valid Expression of type: <b>${validationType}</b></span>`;
-        }
-    } else {
-        validationResult.innerHTML = `<span class="invalid-type">Invalid Type!</span>`;
+    switch (validationType) {
+        case "Email":
+            isValid = /^[\w\.-]+@[\w\.-]+$/.test(inputField);
+            break;
+        case "Phone":
+            isValid = /^(?:\+880|880|0)\d{10}$/.test(inputField);
+            break;
+        case "Postcode":
+            isValid = /^\d{4}$/.test(inputField);
+            break;
+        case "Domain":
+            isValid = /^(?!-)([A-Za-z0-9-]+\.)*[A-Za-z0-9-]{1,63}(?<!-)(\.[A-Za-z]{2,6})$/.test(inputField);
+            break;
+        default:
+            validationResult.innerHTML = `<span class="invalid-type">Invalid Type!</span>`;
+            return;
     }
-};
+
+    if (isValid) {
+        validationResult.innerHTML = `<span class="valid">\"<b>${inputField}</b>\" is a Valid Expression of type: <b>${validationType}</b></span>`;
+    } else {
+        validationResult.innerHTML = `<span class="invalid">\"<b>${inputField}</b>\" is not a Valid Expression of type: <b>${validationType}</b></span>`;
+    }
+}
+
 
 
 //Function to clear the input field
