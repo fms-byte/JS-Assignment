@@ -13,6 +13,6 @@ This repository contains three Projects: Expression Validation, Number Guesser, 
  * CSS
 
 ## Live Demo
- * **Expression Validation:** 
- * **Number Guesser:**
- * **Shopping Cart:** <a href="https://fms-byte.github.io/JS-Assignment/shoppingCart" target="_blank"></a>
+ * **Expression Validation:** https://fms-byte.github.io/JS-Assignment/expressionValidation/
+ * **Number Guesser:** https://fms-byte.github.io/JS-Assignment/numberGuesser/
+ * **Shopping Cart:** https://fms-byte.github.io/JS-Assignment/shoppingCart/
