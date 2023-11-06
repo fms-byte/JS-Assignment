@@ -15,4 +15,4 @@ This repository contains three Projects: Expression Validation, Number Guesser, 
 ## Live Demo
  * **Expression Validation:** 
  * **Number Guesser:**
- * **Shopping Cart:**
+ * **Shopping Cart:** <a href="https://fms-byte.github.io/JS-Assignment/shoppingCart" target="_blank"></a>
