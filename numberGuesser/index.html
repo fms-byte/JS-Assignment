@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Guesser</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guesser Game</h1>
+        <form id="number-guesser-form">
+            <label for="guess">Guess a number between 10 and 20:</label>
+            <input type="number" id="guess" name="guess">
+            <button type="submit" id="guessBtn">Submit</button>
+        </form>
+        <!-- add a element to show the chances left -->
+        <div id="chances">Attempt: <span id="attempt">0 / 3</span></div>
+        <div id="verdict">
+        </div>
+
+        <button type="reset" id="resetBtn">Reset</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
