@@ -16,7 +16,7 @@ function validateExpression() {
 
     switch (validationType) {
         case "Email":
-            isValid = /^[\w\.-]+@[\w\.-]+$/.test(inputField);
+            isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputField);
             break;
         case "Phone":
             isValid = /^(?:\+880|880|0)\d{10}$/.test(inputField);
